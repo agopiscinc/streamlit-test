@@ -44,7 +44,7 @@ st.dataframe(df_japan[view_columns], width=1200, height=200)
 
 #geometryの間引き
 geometry = gpd.GeoSeries.from_wkt(df_japan['geometry'])
-geometry = geometry.simplify(tolerance=0.001)
+geometry = geometry.simplify(tolerance=0.003)
 
 
 @st.cache(allow_output_mutation=True)
